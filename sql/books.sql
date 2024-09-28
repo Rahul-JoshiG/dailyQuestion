@@ -74,4 +74,12 @@ Select author_lname as forward, Reverse(author_lname) as backward from books;
 Select Concat(author_fname, ' ', author_lname) as author, title, release_year, stock_quantity from books;
 
 #Write a sql queries to combine the author_first_name and author_last_name in caps and print with title, pages and stock_quantity.
-Select Upper(Concat(author_fname, ' ', author_lname)) as author, title, pages, stock_quantity;
+Select Concat(Upper(author_fname),' ', Upper(author_lname)) as author, title, pages, stock_quantity from books;
+
+#28/09/2024
+#Write a query to concat title and release year like that "title was release in release year" 
+#the value of title and release year fetch from the books table.
+Select Concat(title, ' was release in ', release_year) as titile_with_year from books;
+
+#Write a query to print book title and length of each title
+Select title, length(title) as length from books;
