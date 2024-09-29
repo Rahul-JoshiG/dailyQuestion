@@ -83,3 +83,16 @@ Select Concat(title, ' was release in ', release_year) as titile_with_year from 
 
 #Write a query to print book title and length of each title
 Select title, length(title) as length from books;
+
+
+#29/09/2024
+#short title, author name, quantity
+Select concat(substring(title, 1, 10),'...') as 'short title',
+concat(author_lname, ', ', author_fname) as author,
+concat(stock_quantity,' in stock') as quantity
+from books;
+
+#Write a sql query to fetch unique title and author_last_name in ascending order.
+Select distinct(title) as title, author_lname
+from books
+order by author_lname asc;
