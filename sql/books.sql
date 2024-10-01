@@ -96,3 +96,14 @@ from books;
 Select distinct(title) as title, author_lname
 from books
 order by author_lname asc;
+
+
+#30/09/2024
+#Find the longest book from the books table. 
+#(longest books means Highest number of pages
+Select title, pages from books 
+order by pages desc limit 1;
+
+#Print the summary containing title, year, for the 3 most recent books
+Select title, release_year from books
+order by release_year desc limit 3;
