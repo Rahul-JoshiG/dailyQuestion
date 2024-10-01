@@ -107,3 +107,13 @@ order by pages desc limit 1;
 #Print the summary containing title, year, for the 3 most recent books
 Select title, release_year from books
 order by release_year desc limit 3;
+
+
+#01/10/2024
+#Find the 3 books with lowest stock
+Select title, stock_quantity from books
+order by stock_quantity asc limit 3;
+
+#Print title, author_last_name, sorted first by author_last_name, and then by title
+Select title, author_lname from books
+order by author_lname, title;
